@@ -23,14 +23,14 @@ const positionOptions = {
 }
 
 var watching;
-watching = navigator.geolocation
-                    .watchPosition( geo_success, geo_error, positionOptions );
     
 function turnOnGPS(){
     if(!navigator.geolocation) {
         alert('Should accept Location setting!');
     }
     
+    watching = navigator.geolocation
+                    .watchPosition( geo_success, geo_error, positionOptions );
     watching;
     console.log('GPS 켜진다');
 }
