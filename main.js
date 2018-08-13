@@ -6,6 +6,8 @@ function geo_success(position){
 
     console.log(`회전 : ${heading}, 속도 : ${speed}`);
         
+    if(heading === null) heading = 0;
+    if(speed === null) speed = 0;
     compass.style.transform = `rotate(${heading}deg)`;
     speedoMeter.textContent = `${speed}KM/H`;
     console.log('GPS ON!');
@@ -17,7 +19,7 @@ function geo_error(){
 }
 
 const positionOptions = {
-    enableHighAccuracy : false,
+    enableHighAccuracy : true,
     timeout : Infinity,
     maximumAge : 0
 }
