@@ -23,6 +23,8 @@ const positionOptions = {
 }
 
 var watching;
+watching = navigator.geolocation
+                    .watchPosition( geo_success, geo_error, positionOptions );
     
 function turnOnGPS(){
     if(!navigator.geolocation) {
@@ -31,7 +33,6 @@ function turnOnGPS(){
     
     watching = navigator.geolocation
                     .watchPosition( geo_success, geo_error, positionOptions );
-    watching;
     console.log('GPS 켜진다');
 }
 
