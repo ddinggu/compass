@@ -8,9 +8,10 @@ function geo_success(position){
         
     if(heading === null) heading = 0;
     if(speed === null) speed = 0;
+   
     compass.style.transform = `rotate(${heading}deg)`;
     speedoMeter.textContent = `${speed}KM/H`;
-    console.log('GPS ON!');
+    
 }
 
 function geo_error(){
@@ -25,8 +26,8 @@ const positionOptions = {
 }
 
 var watching;
-watching = navigator.geolocation
-                    .watchPosition( geo_success, geo_error, positionOptions );
+// watching = navigator.geolocation
+//                     .watchPosition( geo_success, geo_error, positionOptions );
     
 function turnOnGPS(){
     if(!navigator.geolocation) {
