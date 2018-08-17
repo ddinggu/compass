@@ -26,8 +26,8 @@ const positionOptions = {
 }
 
 var watching;
-// watching = navigator.geolocation
-//                     .watchPosition( geo_success, geo_error, positionOptions );
+ watching = navigator.geolocation
+                     .watchPosition( geo_success, geo_error, positionOptions );
     
 function turnOnGPS(){
     if(!navigator.geolocation) {
@@ -46,7 +46,6 @@ function turnOffGPS(){
 
 document.getElementById('on').onclick(turnOnGPS);
 document.getElementById('off').onclick(turnOffGPS);
-
 
 
 
