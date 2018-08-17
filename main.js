@@ -44,8 +44,8 @@ function turnOffGPS(){
     console.log('GPS 꺼진다');
 }
 
-document.getElementById('on').onclick(turnOnGPS);
-document.getElementById('off').onclick(turnOffGPS);
+document.getElementById('on').onclick = function() {turnOnGPS()};
+document.getElementById('off').onclick = function() {turnOffGPS()};
 
 
 
