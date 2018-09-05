@@ -1,4 +1,4 @@
-# Drag Scroll
+# Geolocation Based Speedometer and Compass
 
 [Vanlina JavaScript 30](https://javascript30.com/)의 21번 토픽 과제 
 
